@@ -8,10 +8,20 @@
     <title>Love letter</title>
   </head>
   <body>
-    <audio autoplay loop>
+    <button onclick="playMusic()">Click to Start Music</button>
+
+<audio id="bg-music" loop>
     <source src="music.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
 </audio>
+
+<script>
+    function playMusic() {
+        var audio = document.getElementById("bg-music");
+        audio.play();
+        document.querySelector("button").style.display = "none"; // Hide button after play
+    }
+</script>
+
    <div class="container">  
 <div class="valentines">
   <div class="envelope"></div>
